@@ -800,12 +800,16 @@
   }
 
   p {
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
     white-space: pre-wrap;
     unicode-bidi: plaintext;
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    &:not(:first-child) {
+      margin-top: 20px;
     }
   }
 
@@ -840,7 +844,7 @@
   a.unhandled-link {
     color: $highlight-text-color;
   }
-  
+
   .status__content__show-translation-button,
   +.status__content__read-more-button,
   .status__content__read-more-button,
