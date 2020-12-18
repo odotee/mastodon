@@ -34,7 +34,12 @@
     %meta{ name: 'style-nonce', content: request.content_security_policy_nonce }
 
     = stylesheet_link_tag '/inert.css', skip_pipeline: true, media: 'all', id: 'inert-style'
+
     = stylesheet_link_tag custom_css_path, host: default_url_options[:host], media: 'all'
+
+    -if user_signed_in? && current_user.setting_enable_snowfall
+      = content_tag(:script, nil, src: full_asset_url('plugins/snow.js?v3', skip_pipeline: true), async: true)
+      = stylesheet_link_tag '/plugins/snow.css?v3', skip_pipeline: true, media: 'all', id: 'snow-plugin-style'
 
     = yield :header_tags
 
