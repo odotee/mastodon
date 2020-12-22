@@ -53,6 +53,7 @@ module Mastodon
     end
 
     option :email, required: true
+    option :password, default: SecureRandom.hex
     option :confirmed, type: :boolean
     option :role
     option :reattach, type: :boolean
@@ -61,6 +62,8 @@ module Mastodon
     long_desc <<-LONG_DESC
       Create a new user account with a given USERNAME and an
       e-mail address provided with --email.
+
+      With the --password option. Defaults to a random hex string.
 
       With the --confirmed option, the confirmation e-mail will
       be skipped and the account will be active straight away.
@@ -88,7 +91,7 @@ module Mastodon
       end
 
       account  = Account.new(username: username)
-      password = SecureRandom.hex
+      password = options[:password] || SecureRandom.hex
       user     = User.new(email: options[:email], password: password, agreement: true, approved: true, role_id: role_id, confirmed_at: options[:confirmed] ? Time.now.utc : nil, bypass_invite_request_check: true)
 
       if options[:reattach]
