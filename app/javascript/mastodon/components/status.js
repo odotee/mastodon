@@ -103,6 +103,7 @@ class Status extends ImmutablePureComponent {
       available: PropTypes.bool,
     }),
     contextType: PropTypes.string,
+    excludeBot: PropTypes.bool,
   };
 
   // Avoid checking props that are functions (and whose equality will always
@@ -337,11 +338,15 @@ class Status extends ImmutablePureComponent {
 
     const { intl, hidden, featured, unread, showThread, scrollKey, pictureInPicture, contextType } = this.props;
 
-    let { status, account, ...other } = this.props;
+    let { status, account, excludeBot, ...other } = this.props;
 
     if (status === null) {
       return null;
     }
+
+    const shouldExcludeAsBot = excludeBot ? status.getIn(['account', 'bot']) : false;
+
+    if (shouldExcludeAsBot) return null;
 
     const handlers = this.props.muted ? {} : {
       reply: this.handleHotkeyReply,
