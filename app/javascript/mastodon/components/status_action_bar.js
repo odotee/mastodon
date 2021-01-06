@@ -27,7 +27,6 @@ const messages = defineMessages({
   cancel_reblog_private: { id: 'status.cancel_reblog_private', defaultMessage: 'Unboost' },
   cannot_quote: { id: 'status.cannot_quote', defaultMessage: 'This post cannot be quoted' },
   cannot_reblog: { id: 'status.cannot_reblog', defaultMessage: 'This post cannot be boosted' },
-  local_only: { id: 'status.local_only', defaultMessage: 'This post is only visible by other users of your instance' },
   quote: { id: 'status.quote', defaultMessage: 'Quote' },
   favourite: { id: 'status.favourite', defaultMessage: 'Favourite' },
   bookmark: { id: 'status.bookmark', defaultMessage: 'Bookmark' },
@@ -259,7 +258,6 @@ class StatusActionBar extends ImmutablePureComponent {
     const account            = status.get('account');
     const writtenByMe        = status.getIn(['account', 'id']) === me;
     const localOnly          = status.get('local_only');
-    const federated          = !status.get('local_only');
 
     let menu = [];
 
@@ -387,9 +385,6 @@ class StatusActionBar extends ImmutablePureComponent {
             title={intl.formatMessage(messages.more)}
           />
         </div>
-        { !federated &&
-          <IconButton className='status__action-bar-button' disabled title={intl.formatMessage(messages.local_only)} icon='chain-broken' />
-        }
       </div>
     );
   }
