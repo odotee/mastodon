@@ -483,6 +483,7 @@
   "status.embed": "Embed",
   "status.favourite": "Favourite",
   "status.filtered": "Filtered",
+  "status.fullscreen": "Expand to full screen view",
   "status.hide": "Hide toot",
   "status.hide_translation": "Hide translation",
   "status.history.created": "{name} created {date}",
