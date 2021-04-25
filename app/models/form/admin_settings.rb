@@ -15,6 +15,8 @@ class Form::AdminSettings
     closed_registrations_message
     open_deletion
     timeline_preview
+    enable_auto_follow_bootstrap_timeline_accounts
+    auto_follow_bootstrap_timeline_accounts
     bootstrap_timeline_accounts
     theme
     activity_api_enabled
@@ -38,6 +40,7 @@ class Form::AdminSettings
   BOOLEAN_KEYS = %i(
     open_deletion
     timeline_preview
+    enable_auto_follow_bootstrap_timeline_accounts
     activity_api_enabled
     peers_api_enabled
     show_known_fediverse_at_about_page
@@ -63,6 +66,7 @@ class Form::AdminSettings
   validates :registrations_mode, inclusion: { in: %w(open approved none) }
   validates :site_contact_email, :site_contact_username, presence: true
   validates :site_contact_username, existing_username: true
+  validates :auto_follow_bootstrap_timeline_accounts, existing_username: { multiple: true }
   validates :bootstrap_timeline_accounts, existing_username: { multiple: true }
   validates :show_domain_blocks, inclusion: { in: %w(disabled users all) }
   validates :show_domain_blocks_rationale, inclusion: { in: %w(disabled users all) }
