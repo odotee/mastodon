@@ -43,6 +43,13 @@
       = content_tag(:script, nil, src: full_asset_url('plugins/snow.js?v3', skip_pipeline: true), async: true)
       = stylesheet_link_tag '/plugins/snow.css?v3', skip_pipeline: true, media: 'all', id: 'snow-plugin-style'
 
+
+    - if ENV['PLAUSIBLE_ANALYTICS_HOST']
+      = javascript_include_tag "//#{ ENV['PLAUSIBLE_ANALYTICS_HOST'] }/js/plausible.js", :defer => true, :async => 'async', :'data-domain' => ENV['PLAUSIBLE_ANALYTICS_SITE_DOMAIN'] || Rails.configuration.x.local_domain
+
+    - if ENV['MATOMO_ANALYTICS_HOST']
+      = javascript_pack_tag 'matomo', crossorigin: 'anonymous', 'data-matomo-host' => ENV['MATOMO_ANALYTICS_HOST'], 'data-matomo-site-id' => ENV['MATOMO_ANALYTICS_SITE_ID']
+
     = yield :header_tags
 
   %body{ class: body_classes }
