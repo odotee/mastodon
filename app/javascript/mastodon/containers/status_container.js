@@ -28,6 +28,7 @@ import {
   editStatus,
   hideQuote,
   revealQuote,
+  toggleQuoteStatusCollapse,
 } from '../actions/statuses';
 import {
   unmuteAccount,
@@ -246,6 +247,12 @@ const mapDispatchToProps = (dispatch, { intl, contextType }) => ({
 
   deployPictureInPicture (status, type, mediaProps) {
     dispatch(deployPictureInPicture(status.get('id'), status.getIn(['account', 'id']), type, mediaProps));
+  },
+
+  onQuoteToggleCollapsed (status, isCollapsed) {
+    // dispatch(toggleStatusCollapse(status.get('id'), isCollapsed));
+    // no difference or should also pass the parent id
+    dispatch(toggleQuoteStatusCollapse(status.get('id'), isCollapsed));
   },
 
   onQuoteToggleHidden (status) {
