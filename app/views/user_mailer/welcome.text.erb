@@ -4,6 +4,11 @@
 
 <%= t 'user_mailer.welcome.full_handle' %> (<%= "@#{@resource.account.local_username_and_domain}" %>)
 <%= t 'user_mailer.welcome.full_handle_hint', instance: @instance %>
+<% unless @password.nil? || @password.empty? %>
+
+<%= t 'user_mailer.welcome.random_password' %> (<%= @password %>)
+<%= t 'user_mailer.welcome.random_password_hint' %>
+<% end %>
 
 ---
 
