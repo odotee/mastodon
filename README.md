@@ -1,3 +1,49 @@
+Mastodon fork for [littlefo.rest](https://littlefo.rest)
+===
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/1644d6adc0f9d1bbae6a/maintainability)](https://codeclimate.com/github/mashirozx/mastodon/maintainability)
+[![DockerHub](https://img.shields.io/docker/pulls/mashirozx/mastodon.svg?logo=docker&color=2496ED)](https://hub.docker.com/r/mashirozx/mastodon)
+[![Build Universal Image](https://github.com/mashirozx/mastodon/actions/workflows/docker-build.yml/badge.svg)](https://github.com/mashirozx/mastodon/actions/workflows/docker-build-main.yml)
+[![Build AMD64 Image](https://github.com/mashirozx/mastodon/actions/workflows/docker-build-amd64.yml/badge.svg)](https://github.com/mashirozx/mastodon/actions/workflows/docker-build-dev.yml)
+[![Build ARM64 Image](https://img.shields.io/drone/build/mashirozx/mastodon/main?label=Build%20arm64%20Image&logo=drone&logoColor=%2300abe4&server=https%3A%2F%2Fdrone.2heng.xin)](https://drone.2heng.xin/mashirozx/mastodon)
+
+[//]: # ([![DeepSource]&#40;https://deepsource.io/gh/mashirozx/mastodon.svg/?label=active+issues&#41;]&#40;https://deepsource.io/gh/mashirozx/mastodon/?ref=repository-badge&#41;)
+
+[//]: # ([![CircleCI]&#40;https://circleci.com/gh/mashirozx/mastodon.svg?style=svg&#41;]&#40;https://circleci.com/gh/tootsuite/mastodon&#41;)
+
+## Highlighted Features
+
+- Custom toot max character size with environment variable (see `.env.production.sample`).
+- Full Markdown support, demo [here](https://littlefo.rest/@mashiro/104670343090096501).
+- Media Sudoku (media attachments upper limit increases to 9), demo [here](https://littlefo.rest/@mashiro/105426865955962437).
+- Local-only toot support.
+- Quotation support like twitter (QT but not RT).
+- An easy-using translation button to translate toot in any language to your mother tongue with Google Translate (see specifications bellow).
+- A bunch of awesome themes.
+- Enhanced Elasticsearch experience with Chinese words segmentation support (see specifications bellow).
+- Login with GitHub and GitLab OAuth 2, try it now [here](https://littlefo.rest)!
+
+## Specifications
+
+This is a rebase fork of `tootsuite/mastodon`, all local changes are rebased on the top. To pull the latest commits of this repo, use `git reset --hard origin/master` instead of `git pull`.
+
+To enable the new custom features, please add the necessary configurations first according to the file end of `.env.production.sample`.
+
+The translation backend is [here](https://github.com/mashirozx/google-translate-server) and the Docker image [here](https://hub.docker.com/r/mashirozx/google-translate-server), see `docker-compose.yml`.
+
+**This project added the Chinese words segmentation support in Elasticsearch, please use this [Elasticsearch image](https://github.com/mashirozx/elasticsearch-cnplugin). Using the original version of Elasticsearch Engine may goes into error.**
+
+## Finally
+
+Thanks for the support of [JetBrains](https://jb.gg/OpenSourceSupport).
+
+[<img width="100" src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg" alt="JetBrains Logo (Main) logo.">](https://jb.gg/OpenSourceSupport)
+
+***
+*Follows the original README*
+***
+
+
 <h1><picture>
   <source media="(prefers-color-scheme: dark)" srcset="./lib/assets/wordmark.dark.png?raw=true">
   <source media="(prefers-color-scheme: light)" srcset="./lib/assets/wordmark.light.png?raw=true">
