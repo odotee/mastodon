@@ -1,6 +1,8 @@
 default: styles/application.scss
 contrast: styles/contrast.scss
 mastodon-light: styles/mastodon-light.scss
+dark-blue: styles/dark-blue.scss
+light-blue: styles/light-blue.scss
 dark-purple: styles/dark-purple.scss
 light-purple: styles/light-purple.scss
 dark-red: styles/dark-red.scss
@@ -21,11 +23,11 @@ transparent-aurora: styles/transparent-aurora.scss
 witches-town: styles/witches-town.scss
 sleeping-town: styles/sleeping-town.scss
 forest: styles/forest.scss
-# strawberry: styles/strawberry.scss
 new-year: styles/new-year.scss
 nga: styles/nga.scss
 RaRuRe: styles/rarure.scss
 beebear: styles/beebear.scss
+# deprecated
 # hellowland: styles/hellowland.scss
 ##cybre-light: styles/cybre-light.scss
 # sakura: styles/sakura.scss
@@ -41,3 +43,4 @@ beebear: styles/beebear.scss
 # purple-haze: styles/purple-haze.scss
 # geodude: styles/geodude.scss
 # royal-tenenbaums: styles/royal-tenenbaums.scss
+# strawberry: styles/strawberry.scss
