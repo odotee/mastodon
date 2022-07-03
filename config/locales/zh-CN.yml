@@ -1662,8 +1662,9 @@ zh-CN:
     title: "%{instance} 使用条款和隐私权政策"
   themes:
     bilibili-light: 哔哩哔哩(゜-゜)つロ干杯~
-    contrast: Mastodon（深色主题-群青）
+    contrast: Mastodon（高对比度）
     cybre-light: 老夫的少女心
+    dark-blue: Mastodon (深色主题-群青)
     dark-cyan: Mastodon（深色主题-錆浅葱）
     dark-green: Mastodon（深色主题-若竹）
     dark-orange: Mastodon（深色主题-赤橙）
@@ -1671,8 +1672,9 @@ zh-CN:
     dark-purple: Mastodon（深色主题-桔梗）
     dark-red: Mastodon（深色主题-红绯）
     dark-yellow: Mastodon（深色主题-向日葵）
-    default: Mastodon（默认）
+    default: Mastodon（暗色主题）
     forest: 小森林
+    light-blue: Mastodon (浅色主题-群青)
     light-cyan: Mastodon（浅色主题-錆浅葱）
     light-green: Mastodon（浅色主题-若竹）
     light-orange: Mastodon（浅色主题-赤橙）
@@ -1681,7 +1683,7 @@ zh-CN:
     light-red: Mastodon（浅色主题-红绯）
     light-yellow: Mastodon（浅色主题-向日葵）
     luxury: 奢华
-    mastodon-light: Mastodon（浅色主题-群青）
+    mastodon-light: Mastodon（亮色主题）
     new-year: 新年
     nga: NGA风格
     sakura: 樱花
