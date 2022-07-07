@@ -111,4 +111,9 @@ Devise.setup do |config|
   if ENV['GITLAB_OAUTH2_ENABLED'] == 'true'
     config.omniauth :gitlab, ENV['GITLAB_OAUTH2_KEY'], ENV['GITLAB_OAUTH2_SECRET'], scope: 'read_user'
   end
+
+  # Gitee strategy
+  if ENV['GITEE_OAUTH2_ENABLED'] == 'true'
+    config.omniauth :gitee, ENV['GITEE_OAUTH2_KEY'], ENV['GITEE_OAUTH2_SECRET'], scope: 'user_info emails'
+  end
 end

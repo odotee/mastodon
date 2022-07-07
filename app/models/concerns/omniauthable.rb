@@ -99,9 +99,9 @@ module Omniauthable
       auth_provided_username = nil
       i        = 0
 
-      if auth.provider == 'github'
+      if %w[github gitee].include?(auth.provider)
         auth_provided_username = auth.info.nickname
-      elsif auth.provider == 'gitlab'
+      elsif %w[gitlab].include?(auth.provider)
         auth_provided_username = auth.info.username
       end
 
@@ -125,13 +125,13 @@ module Omniauthable
     end
     
     def trusted_auth_provider(auth)
-      auth.provider == 'github' || auth.provider == 'gitlab'
+      %w[github gitlab gitee].include?(auth.provider)
     end
 
     def trusted_auth_provider_display_name(auth)
-      if auth.provider == 'github'
+      if %w[github gitee].include?(auth.provider)
         return auth.info.name
-      elsif auth.provider == 'gitlab'
+      elsif %w[gitlab].include?(auth.provider)
         return auth.info.name
       end
 
@@ -139,10 +139,12 @@ module Omniauthable
     end
 
     def trusted_auth_provider_email(auth)
-      if auth.provider == 'github'
-        return auth.info.email || auth.extra['all_emails'].select{ |email| email.primary? }.email
-      elsif auth.provider == 'gitlab'
+      if %w[github].include?(auth.provider)
+        return auth.info.email || auth.extra['all_emails'].select{ |email| email.primary? }[0]&.email
+      elsif %w[gitlab].include?(auth.provider)
         return auth.info.email
+      elsif %w[gitee].include?(auth.provider)
+        return auth.info.email || auth.extra['all_emails'].select{ |email| email['scope'].include? 'primary' }[0]&.email
       end
 
       return auth.info.verified_email || auth.info.email
