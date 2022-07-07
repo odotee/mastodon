@@ -99,6 +99,7 @@
   &.button-secondary,
   &.button-alternative-2,
   &.button-github,
+  &.button-gitee,
   &.button-gitlab {
     font-size: 16px;
     line-height: 36px;
@@ -154,6 +155,17 @@
     &:focus,
     &:hover {
       background-color: lighten(#24292f, 4%);
+    }
+  }
+
+  &.button-gitee {
+    color: $white;
+    background: #c71d24;
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: lighten(#c71d24, 4%);
     }
   }
 
