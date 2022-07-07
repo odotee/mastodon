@@ -1,7 +1,8 @@
-// .fa- {
-//   &globe {
-//     &:before {
-//       content: "\f7a3";
-//     }
-//   }
-// }
+ .fa- {
+   &gitee {
+     &:before {
+       font-family: mastodon-custom;
+       content: "\e60c";
+     }
+   }
+ }

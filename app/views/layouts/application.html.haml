@@ -53,6 +53,8 @@
     - if ENV['MATOMO_ANALYTICS_HOST']
       = javascript_pack_tag 'matomo', crossorigin: 'anonymous', 'data-matomo-host' => ENV['MATOMO_ANALYTICS_HOST'], 'data-matomo-site-id' => ENV['MATOMO_ANALYTICS_SITE_ID']
 
+    = stylesheet_link_tag '/plugins/icon-mastodon-custom/iconfont.css?t=1656835877240', skip_pipeline: true, media: 'all', id: 'icon-mastodon-custom-style'
+
     - if user_signed_in?
       - unless (not current_user.setting_enable_noto_serif) or current_user.setting_system_font_ui
         - if ['zh-HK', 'zh-TW'].include? I18n.locale.to_s

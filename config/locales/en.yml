@@ -983,6 +983,7 @@ en:
       saml: SAML
       github: GitHub
       gitlab: GitLab
+      gitee: Gitee
     register: Sign up
     registration_closed: "%{instance} is not accepting new members"
     resend_confirmation: Resend confirmation instructions

@@ -947,6 +947,9 @@ zh-CN:
     providers:
       cas: CAS
       saml: SAML
+      github: GitHub
+      gitlab: GitLab
+      gitee: 码云
     register: 注册
     registration_closed: "%{instance} 目前不接收新成员"
     resend_confirmation: 重新发送确认邮件
