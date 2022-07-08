@@ -936,6 +936,12 @@ zh-CN:
       gitlab: GitLab
       gitee: 码云
       azure_oauth2: 微软账号
+    providers_privacy: |
+      我们仅按最低限度向认证服务商请求并储存用户的个人信息，包括：用户名、昵称、头像和（主）邮箱地址。我们不会向服务商分享或泄露任何用户个人信息或用户数据。
+    providers_notice: |
+      首次操作时将会把第三方账号与你在本站的账号通过（主）邮箱绑定，之后可以通过第三方账号认证登录。
+    providers_notice_auto_register: |
+      如果之前没有本站账号，将会自动通过认证服务商提供的（主）邮箱和其他个人信息创建一个新账号。
     register: 注册
     registration_closed: "%{instance} 目前不接收新成员"
     resend_confirmation: 重新发送确认邮件
