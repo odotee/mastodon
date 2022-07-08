@@ -985,6 +985,12 @@ en:
       gitlab: GitLab
       gitee: Gitee
       azure_oauth2: Microsoft
+    providers_privacy: |
+      We only require and keep the minimum personal information from your auth provider, which includes: username, nickname, avatar and (primary) email. We will not share or leak any personal information or user data to the provider.
+    providers_notice: |
+      This will link your third party account with your account on this site by the (primary) email address for the first time, and then you can login through the third party account.
+    providers_notice_auto_register: |
+      New account will be created with your email and profile information provided by the provider if you have no account here before.
     register: Sign up
     registration_closed: "%{instance} is not accepting new members"
     resend_confirmation: Resend confirmation instructions
