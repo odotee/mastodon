@@ -119,8 +119,9 @@ Devise.setup do |config|
 
   # Azure oauth2 strategy
   if ENV['AZURE_OAUTH2_ENABLED'] == 'true'
-    config.omniauth :azure_oauth2, client_id: ENV['AZURE_OAUTH2_KEY'],
-      client_secret: ENV['AZURE_OAUTH2_SECRET'], scope: 'email openid profile'
-  #  , tenant_id: ENV['AZURE_OAUTH2_TENANT_ID'] || nil
+    config.omniauth :azure_oauth2,
+                    client_id: ENV['AZURE_OAUTH2_KEY'], client_secret: ENV['AZURE_OAUTH2_SECRET'],
+                    tenant_id: ENV['AZURE_OAUTH2_TENANT_ID'] || 'common',
+                    scope: 'email openid profile'
   end
 end

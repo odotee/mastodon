@@ -24,3 +24,6 @@
           %span 
             &nbsp;
             = t('auth.login_with_provider', provider_name: t("auth.providers.#{provider}")) || provider.to_s.chomp("_oauth2").capitalize
+
+    %p.tail= "#{t('auth.providers_notice')} #{ENV['AUTO_REGISTRATION_WITH_AUTH_PROVIDERS'] == 'true' ? t('auth.providers_notice_auto_register') : ''}"
+    %p.tail= t('auth.providers_privacy')
