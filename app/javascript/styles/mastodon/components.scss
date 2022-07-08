@@ -98,6 +98,7 @@
   &.button-alternative,
   &.button-secondary,
   &.button-alternative-2,
+  &.button-azure_oauth2,
   &.button-github,
   &.button-gitee,
   &.button-gitlab {
@@ -177,6 +178,17 @@
     &:focus,
     &:hover {
       background-color: darken(#fc6d27, 4%);
+    }
+  }
+
+  &.button-azure_oauth2 {
+    color: $white;
+    background: #111217;
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: darken(#111217, 4%);
     }
   }
   
