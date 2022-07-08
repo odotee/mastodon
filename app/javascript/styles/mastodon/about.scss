@@ -780,6 +780,21 @@ $small-breakpoint: 960px;
     margin-bottom: 25px;
   }
 
+  .simple_form p.tail {
+    color: $darker-text-color;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 400;
+    margin-top: 25px;
+    margin-bottom: -25px;
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+    &:first-of-type {
+      margin-top: 5px;
+    }
+  }
+
   &__grid {
     max-width: 960px;
     margin: 0 auto;
