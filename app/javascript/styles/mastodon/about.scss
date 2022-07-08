@@ -802,6 +802,59 @@ $small-breakpoint: 960px;
     grid-template-columns: minmax(0, 50%) minmax(0, 50%);
     grid-gap: 30px;
 
+    // reorder the hero widget
+    &__column-registration {
+      .hero-widget {
+        display: none;
+      }
+    }
+
+    &__column-login {
+      .directory {
+        display: none;
+      }
+    }
+
+    &__column-registration.reorder {
+      .hero-widget {
+        margin-top: 0;
+        margin-bottom: 30px;
+      }
+
+      @media screen and (min-width: 739px) {
+        .hero-widget {
+          display: block;
+        }
+        .directory {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 738px) {
+        .hero-widget {
+          display: none;
+        }
+      }
+    }
+
+    &__column-login.reorder {
+      @media screen and (min-width: 739px) {
+        .hero-widget {
+          display: none;
+        }
+        .directory {
+          display: block;
+        }
+      }
+
+      @media screen and (max-width: 738px) {
+        .directory {
+          display: none;
+        }
+      }
+    }
+    // !reorder the hero widget
+
     @media screen and (max-width: 738px) {
       grid-template-columns: minmax(0, 100%);
       grid-gap: 10px;
