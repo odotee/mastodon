@@ -38,6 +38,7 @@ group :pam_authentication, optional: true do
 end
 
 gem 'net-ldap', '~> 0.17'
+gem 'omniauth-azure-oauth2', '~> 0.0.9'
 gem 'omniauth-cas', '~> 2.0'
 gem 'omniauth-github', '~> 1.4'
 gem 'omniauth-gitlab', '~> 1.0.2'

@@ -116,4 +116,11 @@ Devise.setup do |config|
   if ENV['GITEE_OAUTH2_ENABLED'] == 'true'
     config.omniauth :gitee, ENV['GITEE_OAUTH2_KEY'], ENV['GITEE_OAUTH2_SECRET'], scope: 'user_info emails'
   end
+
+  # Azure oauth2 strategy
+  if ENV['AZURE_OAUTH2_ENABLED'] == 'true'
+    config.omniauth :azure_oauth2, client_id: ENV['AZURE_OAUTH2_KEY'],
+      client_secret: ENV['AZURE_OAUTH2_SECRET'], scope: 'email openid profile'
+  #  , tenant_id: ENV['AZURE_OAUTH2_TENANT_ID'] || nil
+  end
 end
