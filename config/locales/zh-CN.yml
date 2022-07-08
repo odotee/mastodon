@@ -1016,6 +1016,7 @@ zh-CN:
       github: GitHub
       gitlab: GitLab
       gitee: 码云
+      azure_oauth2: 微软账号
     register: 注册
     registration_closed: "%{instance} 目前不接收新成员"
     resend_confirmation: 重新发送确认邮件
