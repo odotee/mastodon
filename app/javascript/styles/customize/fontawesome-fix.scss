@@ -5,4 +5,11 @@
        content: "\e60c";
      }
    }
+
+   &azure_oauth2 {
+     &:before {
+       font-family: Font Awesome\ 5 Brands;
+       content: "\f3ca";
+     }
+   }
  }
