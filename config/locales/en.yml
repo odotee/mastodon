@@ -984,6 +984,7 @@ en:
       github: GitHub
       gitlab: GitLab
       gitee: Gitee
+      azure_oauth2: Microsoft
     register: Sign up
     registration_closed: "%{instance} is not accepting new members"
     resend_confirmation: Resend confirmation instructions
