@@ -51,7 +51,7 @@ The Docker images are listed [here](https://hub.docker.com/r/mashirozx/mastodon/
     </tr>
     <tr>
         <td><code>latest-arm64</code></td>
-        <td>arm64</td>
+        <td>arm64/v8</td>
     </tr>
     <tr>
         <td><code>latest-amd64</code></td>
