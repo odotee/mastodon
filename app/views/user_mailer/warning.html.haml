@@ -46,6 +46,12 @@
                                 %p
                                   %strong= t('user_mailer.warning.reason')
                                   = t("user_mailer.warning.categories.#{@warning.report.category}")
+                                %p
+                                  %strong= t('user_mailer.warning.disposer')
+                                  %span{ style: 'border: 1px solid #393f4f; padding: 5px; border-radius: 4px;' }
+                                    = image_tag full_asset_url(@warning.account.avatar.url), alt:'', width: 20, height: 20, style: 'border-radius: 50%; vertical-align: middle;'
+                                    = display_name(@warning.account)
+                                    = " (#{"@#{@warning.account.pretty_acct}"})"
 
                                 - if @warning.report.violation? && @warning.report.rule_ids.present?
                                   %ul.rules-list
