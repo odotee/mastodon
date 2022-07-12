@@ -20,6 +20,11 @@
 
 <% end %>
 <% end %>
+
+<% unless @warning.account.blank? %>
+**<%= t('user_mailer.warning.disposer') %>** <%= display_name(@warning.account) %> (<%= "@#{@warning.account.pretty_acct}" %>)
+<% end %>
+
 <% if !@statuses.empty? %>
 <%= t('user_mailer.warning.statuses') %>
 
