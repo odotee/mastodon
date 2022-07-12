@@ -1733,6 +1733,7 @@ zh-TW:
       categories:
         spam: 垃圾訊息
         violation: 該內容違反以下社群規章
+      disposer: 处置人：
       explanation:
         delete_statuses: 您的某些嘟文被發現違反了一項或多項社群準則，隨後已被 %{instance} 的管理員刪除。
         disable: 您無法繼續使用您的帳號，但您的個人頁面及其他資料內容保持不變。您可以要求一份您的資料備份，帳號異動設定，或是刪除帳號。
