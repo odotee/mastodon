@@ -13,6 +13,8 @@
 <% if @warning.report && !@warning.report.other? %>
 **<%= t('user_mailer.warning.reason') %>** <%= t("user_mailer.warning.categories.#{@warning.report.category}") %>
 
+**<%= t('user_mailer.warning.disposer') %>** <%= display_name(@warning.account) %> (<%= "@#{@warning.account.pretty_acct}" %>)
+
 <% if @warning.report.violation? && @warning.report.rule_ids.present? %>
 <% @warning.report.rules.each do |rule| %>
 - <%= rule.text %>

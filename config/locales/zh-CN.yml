@@ -1752,6 +1752,7 @@ zh-CN:
       categories:
         spam: 垃圾信息
         violation: 内容违反了以下社区准则
+      disposer: 处置人：
       explanation:
         delete_statuses: 你的一些嘟文被发现违反了一条或多条社区准则，并已被 %{instance} 的监察员删除。
         disable: 你不能再使用你的帐户，但你的个人资料和其他数据保持不变。你可以请求数据备份，更改账户设置或删除账户。
