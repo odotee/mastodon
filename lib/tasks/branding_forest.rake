@@ -19,7 +19,7 @@ namespace :branding_forest do
     # end
 
     # Displayed size is 34px, at 3x it's 102px
-    rsvg_convert.run(input: Rails.root.join('design', 'forest', 'logo-symbol-wordmark.svg'), size: 102, output: output_dest.join('wordmark_forest.png'))
+    rsvg_convert.run(input: Rails.root.join('design', 'forest', 'logo-symbol-wordmark-with-sub.svg'), size: 102, output: output_dest.join('wordmark_forest.png'))
 
     # Displayed size is 24px, at 3x it's 72px
     rsvg_convert.run(input: Rails.root.join('design', 'forest', 'logo-symbol-icon.svg'), size: 72, output: output_dest.join('logo_forest.png'))
@@ -32,6 +32,9 @@ namespace :branding_forest do
 
     rsvg_convert.run(stylesheet: Rails.root.join('lib', 'assets', 'wordmark.dark.css'), input: Rails.root.join('design', 'forest', 'logo-symbol-wordmark.svg'), size: 102, output: output_dest.join('wordmark_forest.dark.png'))
     rsvg_convert.run(stylesheet: Rails.root.join('lib', 'assets', 'wordmark.light.css'), input: Rails.root.join('design', 'forest', 'logo-symbol-wordmark.svg'), size: 102, output: output_dest.join('wordmark_forest.light.png'))
+
+    rsvg_convert.run(stylesheet: Rails.root.join('lib', 'assets', 'wordmark.dark.css'), input: Rails.root.join('design', 'forest', 'logo-symbol-wordmark-with-sub.svg'), size: 102, output: output_dest.join('wordmark-with-sub_forest.dark.png'))
+    rsvg_convert.run(stylesheet: Rails.root.join('lib', 'assets', 'wordmark.light.css'), input: Rails.root.join('design', 'forest', 'logo-symbol-wordmark-with-sub.svg'), size: 102, output: output_dest.join('wordmark-with-sub_forest.light.png'))
   end
 
   desc 'Generate favicons and app icons from SVG source files (for the Little Forest)'
@@ -93,5 +96,9 @@ namespace :branding_forest do
     logo_symbol_wordmark_source = Rails.root.join('design', 'forest', 'logo-symbol-wordmark.svg')
     logo_symbol_wordmark_dest   = Rails.root.join('app', 'javascript', 'images', 'logo-symbol-wordmark_forest.svg')
     FileUtils.cp(logo_symbol_wordmark_source, logo_symbol_wordmark_dest)
+
+    logo_symbol_wordmark_with_sub_source = Rails.root.join('design', 'forest', 'logo-symbol-wordmark-with-sub.svg')
+    logo_symbol_wordmark_with_sub_dest   = Rails.root.join('app', 'javascript', 'images', 'logo-symbol-wordmark-with-sub_forest.svg')
+    FileUtils.cp(logo_symbol_wordmark_with_sub_source, logo_symbol_wordmark_with_sub_dest)
   end
 end
