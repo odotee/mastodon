@@ -19,19 +19,23 @@ module BrandingHelper
   end
 
   def render_logo
-    image_pack_tag('logo.svg', alt: 'Mastodon', class: 'logo logo--icon')
+    image_pack_tag("logo#{suffix}.svg", alt: 'Mastodon', class: 'logo logo--icon')
   end
 
   def render_symbol(version = :icon)
     path = begin
       case version
       when :icon
-        'logo-symbol-icon.svg'
+        "logo-symbol-icon#{suffix}.svg"
       when :wordmark
-        'logo-symbol-wordmark.svg'
+        "logo-symbol-wordmark#{suffix}.svg"
       end
     end
 
     render(file: Rails.root.join('app', 'javascript', 'images', path)).html_safe # rubocop:disable Rails/OutputSafety
+  end
+
+  def suffix
+    ENV['LOGO_PACK'] || ''
   end
 end
