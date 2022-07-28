@@ -1,5 +1,10 @@
+<h1><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./lib/assets/wordmark_forest.dark.png?raw=true">
+  <source media="(prefers-color-scheme: light)" srcset="./lib/assets/wordmark_forest.light.png?raw=true">
+  <img alt="Mastodon" src="./lib/assets/wordmark.light.png?raw=true" height="34">
+</picture></h1>
+
 Mastodon fork for [littlefo.rest](https://littlefo.rest)
-===
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/1644d6adc0f9d1bbae6a/maintainability)](https://codeclimate.com/github/mashirozx/mastodon/maintainability)
 [![DockerHub](https://img.shields.io/docker/pulls/mashirozx/mastodon.svg?logo=docker&color=2496ED)](https://hub.docker.com/r/mashirozx/mastodon)
