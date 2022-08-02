@@ -127,15 +127,17 @@ services:
   #     - external_network
   #     - internal_network
 
-  translate:
+  translation:
+    build: .
+    image: mashirozx/mastodon:latest
     restart: always
-    image: mashirozx/google-translate-server:latest
-    # ports:
-    #   - "0.0.0.0:30031:30031"
-    command: "npm start -- --domain ${DOMAIN:-com}"
+    env_file: .env.production
+    command: node ./translation
     networks:
-      - external_network
+#      - external_network
       - internal_network
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider --proxy=off 'http://localhost:5000/health' || kill 1"]
 
 networks:
   external_network:

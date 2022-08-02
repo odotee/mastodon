@@ -532,7 +532,7 @@
   "status.show_poll": "アンケートを表示",
   "status.show_thread": "スレッドを表示",
   "status.show_translation": "トゥートへを翻訳",
-  "status.translation_by": "{google} が提供する翻訳サービス",
+  "status.translation_by": "{google} による{from}からの翻訳",
   "status.translation_failed": "翻訳を取得できませんでした",
   "status.uncached_media_warning": "利用できません",
   "status.unmute_conversation": "会話のミュートを解除",

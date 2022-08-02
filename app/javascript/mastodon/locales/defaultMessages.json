@@ -678,7 +678,7 @@
         "id": "status.translation_failed"
       },
       {
-        "defaultMessage": "Translation powered by {google}",
+        "defaultMessage": "Translated from {from} by {google}",
         "id": "status.translation_by"
       },
       {
