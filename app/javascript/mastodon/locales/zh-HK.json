@@ -507,7 +507,7 @@
   "status.show_more_all": "全部展開",
   "status.show_thread": "顯示討論串",
   "status.show_translation": "翻譯嘟文",
-  "status.translation_by": "由 {google} 翻譯提供",
+  "status.translation_by": "由 {google} 翻譯自{from}",
   "status.translation_failed": "獲取翻譯失敗",
   "status.uncached_media_warning": "無法使用",
   "status.unmute_conversation": "對話解除靜音",
