@@ -23,7 +23,7 @@ Mastodon fork for [littlefo.rest](https://littlefo.rest)
 - Media Sudoku (media attachments upper limit increases to 9), demo [here](https://littlefo.rest/@mashiro/105426865955962437).
 - Local-only toot support.
 - Quotation support like twitter (QT but not RT).
-- An easy-using translation button to translate toot in any language to your mother tongue with Google Translate (see specifications bellow).
+- An easy-using translation button to translate toot in any language to your mother tongue with Google Translate, demo [here](https://s3.mashiro.top/mstdn/media_attachments/files/108/763/169/312/585/099/original/3735baafcfe154f3.png).
 - A bunch of awesome themes.
 - Enhanced Elasticsearch experience with Chinese words segmentation support (see specifications bellow).
 - Login with GitHub and GitLab OAuth 2, try it now [here](https://littlefo.rest)!
@@ -35,8 +35,6 @@ This is a rebase fork of `tootsuite/mastodon`, all local changes are rebased on 
 
 ### Enable Custom Features
 To enable the new custom features, please add the necessary configurations first according to the file end of `.env.production.sample`.
-
-The translation backend is [here](https://github.com/mashirozx/google-translate-server) and the Docker image [here](https://hub.docker.com/r/mashirozx/google-translate-server), see `docker-compose.yml`.
 
 **This project added the Chinese words segmentation support in ElasticSearch, please use this [ElasticSearch image](https://github.com/mashirozx/elasticsearch-cnplugin). Using the original version of ElasticSearch Engine may goes into error.**
 
