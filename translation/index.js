@@ -148,7 +148,6 @@ app.get('/health', (_request, response) => {
 });
 
 app.post('*', async (request, response) => {
-  // console.log(JSON.stringify([request.headers, request.body], null, 2));
   const body = request.body;
 
   const { content, to, status, edit } = body;
@@ -253,7 +252,7 @@ app.post('*', async (request, response) => {
       text: fragment.firstChild.innerHTML, from, to,
     });
   } catch (err) {
-    logger.error = err;
+    logger.error = err.toString();
     logger.content = content;
     log.error('[error]', JSON.stringify(logger));
 
