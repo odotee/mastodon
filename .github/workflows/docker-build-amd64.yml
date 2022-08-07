@@ -48,8 +48,8 @@ jobs:
         with:
           context: .
           file: ./Dockerfile.slim
-          build-args:
-            - GIT_COMMIT=${{ github.sha }}
+          build-args: |
+            GIT_COMMIT=${{ github.sha }}
           pull: true
           push: true
           platforms: linux/amd64
