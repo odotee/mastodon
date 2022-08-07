@@ -57,6 +57,8 @@ steps:
         from_secret: docker_password
       dockerfile: Dockerfile.slim
       squash: true
+      build_args:
+        - GIT_COMMIT=${DRONE_COMMIT_SHA}
     when:
       branch:
         - main
