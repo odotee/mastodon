@@ -45,15 +45,15 @@ defaults: &defaults
   trendable_by_default: false
   crop_images: true
   notification_emails:
-    follow: true
+    follow: false
     reblog: false
     favourite: false
-    mention: true
+    mention: false
     follow_request: true
     digest: true
     report: true
     pending_account: true
-    trending_tag: true
+    trending_tag: false
     appeal: true
   always_send_emails: false
   interactions:
