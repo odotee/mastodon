@@ -866,10 +866,6 @@
     &:last-child {
       margin-bottom: 0;
     }
-
-    &:not(:first-child) {
-      margin-top: 20px;
-    }
   }
 
   a {
