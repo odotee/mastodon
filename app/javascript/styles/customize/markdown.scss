@@ -1,5 +1,11 @@
-.status__content,
+.status__content__text,
 .reply-indicator__content {
+
+  > * {
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
 
   p {
     line-height: 26px;
