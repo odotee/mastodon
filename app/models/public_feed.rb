@@ -39,7 +39,7 @@ class PublicFeed
   attr_reader :account, :options
 
   def account_is_bot?
-    @account.bot?
+    @account&.bot?
   end
 
   def with_reblogs?
