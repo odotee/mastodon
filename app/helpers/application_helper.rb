@@ -188,6 +188,26 @@ module ApplicationHelper
     output.reject(&:blank?).join(' ')
   end
 
+  def google_fonts_base_url
+    "https://#{ENV['FONTS_GOOGLEAPIS_PROXY_HOST'] || 'fonts.googleapis.com'}"
+  end
+
+  def zh_hans_font_url
+    "#{google_fonts_base_url}/css2?family=Noto+Serif+SC:wght@200;300;400;500;600;700;900&display=swap"
+  end
+
+  def zh_hant_font_url
+    "#{google_fonts_base_url}/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap"
+  end
+
+  def ja_font_url
+    "#{google_fonts_base_url}/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap"
+  end
+
+  def forest_icon_pack_url
+    '/plugins/icon-forest/iconfont.css?t=1656835877240'
+  end
+
   def cdn_host
     Rails.configuration.action_controller.asset_host
   end

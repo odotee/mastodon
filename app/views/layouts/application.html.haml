@@ -61,15 +61,15 @@
     - if user_signed_in?
       - unless (not current_user.setting_enable_noto_serif) or current_user.setting_system_font_ui
         - if ['zh-HK', 'zh-TW'].include? I18n.locale.to_s
-          = stylesheet_link_tag 'https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap', skip_pipeline: true, media: 'all'
+          = stylesheet_link_tag zh_hans_font_url, skip_pipeline: true, media: 'all'
         - if ['ja'].include? I18n.locale.to_s
-          = stylesheet_link_tag 'https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap', skip_pipeline: true, media: 'all'
+          = stylesheet_link_tag ja_font_url, skip_pipeline: true, media: 'all'
         - else
-          = stylesheet_link_tag 'https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600;700;900&display=swap', skip_pipeline: true, media: 'all'
+          = stylesheet_link_tag zh_hans_font_url, skip_pipeline: true, media: 'all'
 
       - if current_user.setting_icon_pack == 'forest'
         -# = stylesheet_link_tag 'https://at.alicdn.com/t/font_3453204_g1r9b59fnds.css', skip_pipeline: true, media: 'all'
-        = stylesheet_link_tag '/plugins/icon-forest/iconfont.css?t=1656835877240', skip_pipeline: true, media: 'all', id: 'icon-forest-style'
+        = stylesheet_link_tag forest_icon_pack_url, skip_pipeline: true, media: 'all', id: 'icon-forest-style'
 
     = yield :header_tags
 

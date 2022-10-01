@@ -17,7 +17,7 @@ media_host ||= host_to_url(ENV['S3_HOSTNAME']) if ENV['S3_ENABLED'] == 'true'
 media_host ||= assets_host
 
 analytics_host = "#{host_to_url(ENV['PLAUSIBLE_ANALYTICS_HOST'])} #{host_to_url(ENV['MATOMO_ANALYTICS_HOST'])}"
-google_fonts_host = "#{host_to_url('fonts.googleapis.com')} #{host_to_url('fonts.gstatic.com')}"
+google_fonts_host = "#{host_to_url('fonts.googleapis.com')} #{host_to_url('fonts.gstatic.com')} #{host_to_url(ENV['FONTS_GOOGLEAPIS_PROXY_HOST'])} #{host_to_url(ENV['FONTS_GSTATIC_PROXY_HOST'])}"
 iconfont_host = "#{host_to_url('at.alicdn.com')}"
 
 Rails.application.config.content_security_policy do |p|
