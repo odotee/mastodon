@@ -7,11 +7,11 @@ on:
       - 'main'
       - 'stable-*'
   pull_request:
-    branches:
-      - 'main'
-      - 'stable-*'
-  schedule:
-    - cron: '22 6 * * 1'
+  #  branches:
+  #    - 'main'
+  #    - 'stable-*'
+  #schedule:
+  #  - cron: '22 6 * * 1'
 
 jobs:
   analyze:
