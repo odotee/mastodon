@@ -1964,6 +1964,10 @@ zh-CN:
     default: Mastodon（暗色主题）
     mastodon-light: Mastodon（亮色主题）
     system: 自动切换（使用系统主题）
+    tangerineui: 柑 UI
+    tangerineui-purple: 柑 UI （紫）
+    tangerineui-cherry: 柑 UI （樱）
+    tangerineui-lagoon: 柑 UI （湖）
   time:
     formats:
       default: "%Y年%m月%d日 %H:%M"
