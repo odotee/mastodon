@@ -1910,6 +1910,10 @@ zh-CN:
     ubuntu-terminal: 深紫
     win95: Windows 95
     witches-town: 巫师小镇
+    tangerineui: 柑 UI
+    tangerineui-purple: 柑 UI （紫）
+    tangerineui-cherry: 柑 UI （樱）
+    tangerineui-lagoon: 柑 UI （湖）
   time:
     formats:
       default: "%Y年%m月%d日 %H:%M"

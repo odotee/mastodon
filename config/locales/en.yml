@@ -1963,6 +1963,10 @@ en:
     ubuntu-terminal: Dark Purple
     win95: Windows 95
     witches-town: Witches Town
+    tangerineui: Tangerine UI
+    tangerineui-purple: Tangerine UI (Purple)
+    tangerineui-cherry: Tangerine UI (Cherry)
+    tangerineui-lagoon: Tangerine UI (Lagoon)
   time:
     formats:
       default: "%b %d, %Y, %H:%M"
