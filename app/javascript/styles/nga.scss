@@ -1,5 +1,9 @@
 /* https://github.com/AstroProfundis/mastodon/blob/lynx/app/javascript/styles/nga.scss */
 
+// base on mastodon-light theme
+@use 'application';
+@use 'mastodon-light/diff';
+
 // Dependent colors
 $black: #330e04;
 $white: #fffffc;
@@ -40,10 +44,6 @@ $account-background-color: $white !default;
 @function lighten($color, $amount) {
   @return hsl(hue($color), saturation($color), lightness($color) - $amount);
 }
-
-// base on mastodon-light theme
-@import 'application';
-@import 'mastodon-light/diff';
 
 .drawer__inner, .column > .scrollable, .column-link, .column-header, .column-header__button, .drawer__header a, .getting-started .column-link, .column-back-button, .account__header__bar, .column-header__back-button {
   background: #F9F6E8 !important;

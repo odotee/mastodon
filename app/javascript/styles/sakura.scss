@@ -1,3 +1,7 @@
+
+@use 'application';
+@use 'mastodon-light/diff';
+
 // Dependent colors
 $black: #000000;
 $white: #ffffff;
@@ -40,9 +44,6 @@ $account-background-color: #b2d4cd !default;
   @return hsl(hue($color), saturation($color), lightness($color) - $amount);
 }
 
-
-@import 'application';
-@import 'mastodon-light/diff';
 
 .drawer__inner, .column > .scrollable, .column-link, .column-header, .column-header__button, .drawer__header a, .getting-started .column-link, .column-back-button, .account__header__bar, .column-header__back-button {
   background: #D5E5E2 !important;

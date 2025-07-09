@@ -1,5 +1,7 @@
 
-@import 'application';
+@use 'application';
+$dark-text-color: #515170;
+$simple-background-color: #fff;
 
 /* Wider compose area 
 @media screen and (min-width: 1300px) {
