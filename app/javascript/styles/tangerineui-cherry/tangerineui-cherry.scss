@@ -8,7 +8,7 @@
 
 /* 📄 Meta */
 :root {
-    --version: "v2.4";
+    --version: "v2.4.1";
 
     --variant-name: "Cherry";
     --variant-emoji: "\1F352\00A0";
@@ -560,6 +560,9 @@ body.app-body  {
     background-color: var(--color-content-secondary-bg);
     border-radius: 50%;
     aspect-ratio: 1 / 1;
+}
+.app-body .navigation-bar .account__avatar {
+    background-color: var(--color-content-bg);
 }
 .app-body .account__avatar img {
     border-radius: 50%;
@@ -3203,6 +3206,10 @@ div[tabindex="-1"] + div[tabindex="-1"] > .status__wrapper > .status-reply.statu
 .app-body .content-warning > p {
     font-weight: bold;
 }
+.app-body .content-warning--filter .filter-name {
+    color: var(--color-content-fg);
+    font-weight: bold;
+}
 .app-body .content-warning::before,
 .app-body .content-warning::after {
     display: none;
@@ -4267,6 +4274,11 @@ div[tabindex="-1"] + div[tabindex="-1"] > .status__wrapper > .status-reply.statu
         backdrop-filter: blur(10px);
     }
 }
+@media screen and (max-width: 1174px) {
+    .app-body .columns-area__panels__pane--navigational .navigation-panel {
+        border: 0
+    }
+}
 
 
 /* 👤 Account view
@@ -4724,6 +4736,18 @@ div[tabindex="-1"] + div[tabindex="-1"] > .status__wrapper > .status-reply.statu
     .app-body .featured-carousel::before {
         display: none;
     }
+}
+.layout-multiple-columns .featured-carousel__header {
+    margin-right: 17px;
+}
+.layout-multiple-columns .featured-carousel__title {
+    margin-left: 17px;
+}
+.layout-multiple-columns .featured-carousel__slide:not([inert]) {
+    flex-basis: 100%;
+}
+.layout-multiple-columns .featured-carousel::before {
+    display: none;
 }
 
 
