@@ -2012,6 +2012,9 @@ en:
     tangerineui-purple: Tangerine UI (Purple)
     tangerineui-cherry: Tangerine UI (Cherry)
     tangerineui-lagoon: Tangerine UI (Lagoon)
+    mastodon-bird-ui-light: Bird UI (Light)
+    mastodon-bird-ui-dark: Bird UI (Dark)
+    mastodon-bird-ui-contrast: Bird UI (High contrast)
   time:
     formats:
       default: "%b %d, %Y, %H:%M"

@@ -1968,6 +1968,9 @@ zh-CN:
     tangerineui-purple: 柑 UI （紫）
     tangerineui-cherry: 柑 UI （樱）
     tangerineui-lagoon: 柑 UI （湖）
+    mastodon-bird-ui-light: 蓝鸟 UI （亮色）
+    mastodon-bird-ui-dark: 蓝鸟 UI （暗色）
+    mastodon-bird-ui-contrast: 蓝鸟 UI （高对比）
   time:
     formats:
       default: "%Y年%m月%d日 %H:%M"
