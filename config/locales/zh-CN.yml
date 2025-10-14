@@ -2144,6 +2144,9 @@ zh-CN:
     title: "%{domain} 更新了服务条款"
   themes:
     default: Mastodon
+    mastodon-bird-ui-accessible-plus: 蓝鸟 UI 无障碍增强版
+    mastodon-bird-ui-accessible: 蓝鸟 UI 无障碍版
+    mastodon-bird-ui-auto: 蓝鸟 UI
   time:
     formats:
       default: "%Y年%m月%d日 %H:%M"
