@@ -2144,6 +2144,11 @@ zh-CN:
     title: "%{domain} 更新了服务条款"
   themes:
     default: Mastodon
+    tangerineui: 柑 UI
+    tangerineui-purple: 柑 UI （紫）
+    tangerineui-cherry: 柑 UI （樱）
+    tangerineui-lagoon: 柑 UI （湖）
+    tangerineui-granite: 柑 UI （岩）
     mastodon-bird-ui-accessible-plus: 蓝鸟 UI 无障碍增强版
     mastodon-bird-ui-accessible: 蓝鸟 UI 无障碍版
     mastodon-bird-ui-auto: 蓝鸟 UI
