@@ -2194,6 +2194,11 @@ en:
     title: The terms of service of %{domain} are changing
   themes:
     default: Mastodon
+    tangerineui: Tangerine UI
+    tangerineui-purple: Tangerine UI (Purple)
+    tangerineui-cherry: Tangerine UI (Cherry)
+    tangerineui-lagoon: Tangerine UI (Lagoon)
+    tangerineui-granite: Tangerine UI (Granite)
     mastodon-bird-ui-accessible-plus: Mastodon Bird UI (Accessible Plus)
     mastodon-bird-ui-accessible: Mastodon Bird UI (Accessible)
     mastodon-bird-ui-auto: Mastodon Bird UI
